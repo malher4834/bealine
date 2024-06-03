@@ -1,0 +1,11 @@
+ else {
+  if (mysql_query(&mysql, "select * from tb_book")) {
+   printf("can not open\n");
+  }
+  else
+  {
+   result = mysql_store_result(&mysql);
+   mysql_num_rows(result);
+   row = mysql_fetch_row(result);
+   printf("\tID:");
+   scanf("%s", id);
